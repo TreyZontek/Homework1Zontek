@@ -1,0 +1,75 @@
+﻿@page
+@model Homework1Zontek.Pages.SearchresultModel
+@{
+}
+<h1 class="h1">Search Results</h1>
+
+<h2> Top Vacation Destinations</h2>
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid red;
+        padding: 8px;
+        text-align: left;
+    }
+
+        td.divider {
+            border-left: 1px solid red;
+        }
+</style>
+
+
+    <table id="myTable">
+        <tr>
+            <td>1. Punta Cana</td>
+            <td>Average Temp: 86</td>
+        </tr>
+        <tr>
+            <td>2. Miami</td>
+            <td>Average Temp: 87</td>
+        </tr>
+        <tr>
+            <td>3. Guam</td>
+            <td>Average Temp: 82</td>
+        </tr>
+        <tr>
+            <td>4. Jamaica</td>
+            <td>Average Temp: 84</td>
+        </tr>
+        <tr>
+            <td>5. Tahiti</td>
+            <td>Average Temp: 80</td>
+        </tr>
+      
+    </table>
+
+<button id="hideButton">Hide Second Column</button>
+<button id="showButton">Show Second Column</button>
+
+<script>
+    
+    var hideButton = document.getElementById('hideButton');
+    var showButton = document.getElementById('showButton');
+    var table = document.getElementById('myTable');
+
+  
+    hideButton.addEventListener('click', function () {
+     
+        for (var i = 0; i < table.rows.length; i++) {
+            table.rows[i].cells[1].style.display = 'none';
+        }
+    });
+
+    
+    showButton.addEventListener('click', function () {
+  
+        for (var i = 0; i < table.rows.length; i++) {
+            table.rows[i].cells[1].style.display = '';
+        }
+    });
+</script>
+  
